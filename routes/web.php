@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/projects', 'ProjectsController@index');
 Route::get('/projects/add', 'ProjectsController@create');
 Route::post('/projects/store', 'ProjectsController@store');
+Route::get('/projects/{project}', 'ProjectsController@show');
+Route::get('/projects/{project}/tasks', 'TasksController@create');
+Route::post('/projects/{project}/tasks', 'TasksController@store');

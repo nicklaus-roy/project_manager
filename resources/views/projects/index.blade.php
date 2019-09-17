@@ -8,6 +8,7 @@
 					<th scope="col">Title</th>
 					<th scope="col">Description</th>
 					<th scope="col">Due Date</th>
+					<th scope="col">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -17,6 +18,7 @@
 						<td>{{ $project->title }}</td>
 						<td>{{ $project->description }}</td>
 						<td>{{ \Carbon\Carbon::parse($project->due_date)->toFormattedDateString() }}</td>
+						<td><a href="/projects/{{ $project->id }}">View</a></td>
 					</tr>
 				@endforeach
 			</tbody>
