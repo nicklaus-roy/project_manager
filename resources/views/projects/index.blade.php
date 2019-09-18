@@ -19,6 +19,7 @@
 						<td>{{ $project->description }}</td>
 						<td>{{ \Carbon\Carbon::parse($project->due_date)->toFormattedDateString() }}</td>
 						<td><a href="/projects/{{ $project->id }}">View</a></td>
+						<td><a href="/projects/{{ $project->id }}/edit">Edit</a></td>
 					</tr>
 				@endforeach
 			</tbody>

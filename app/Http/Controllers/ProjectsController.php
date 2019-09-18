@@ -34,5 +34,17 @@ class ProjectsController extends Controller
     	return view('projects.show')->with('project', $project);
     }
     
-    
+    public function edit(Project $project)
+    {
+        return view('projects.edit')->with('project', $project);
+    }
+
+    public function update(Project $project)
+    {
+        $project->title = request()->title;
+        $project->description = request()->description;
+        $project->due_date = request()->due_date;
+        $project->save();
+        return redirect('/projects');
+    }
 }

@@ -7,6 +7,7 @@
 					<th scope="col">ID</th>
 					<th scope="col">Title</th>
 					<th scope="col">Description</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -15,6 +16,9 @@
 						<td>{{ $task->id }}</td>
 						<td>{{ $task->title }}</td>
 						<td>{{ $task->description }}</td>
+						<td>
+							<a href="/projects/tasks/{{ $task->id }}/edit">Edit</a>
+						</td>
 					</tr>
 				@endforeach
 			</tbody>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Task;
 use Illuminate\Http\Request;
 
 class TasksController extends Controller
@@ -22,5 +23,16 @@ class TasksController extends Controller
     	return redirect('/projects/'.$project->id);
     }
     
-    
+    public function edit(Task $task)
+    {
+        return view('tasks.edit')->with('task', $task);
+    }
+
+    public function update(Task $task)
+    {
+        $task->title = request()->title;
+        $task->description = request()->description;
+        $task->save();
+        return redirect('/projects/'.$task->project->id);
+    }
 }
