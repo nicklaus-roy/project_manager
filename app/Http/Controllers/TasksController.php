@@ -17,7 +17,7 @@ class TasksController extends Controller
     {
     	$project->tasks()->create([
     		'title' => request()->title,
-    		'description' => request()->title
+    		'description' => request()->description
     	]);
 
     	return redirect('/projects/'.$project->id);

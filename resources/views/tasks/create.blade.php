@@ -8,8 +8,8 @@
 		    <input type="text" class="form-control" name='title' placeholder="Title">
 		  </div>
 		  <div class="form-group">
-		    <label for="description">Descriptipon</label>
-		    <input type="text" class="form-control" name="description" placeholder="Descriptipon">
+		    <label for="description">Description</label>
+		    <input type="text" class="form-control" name="description" placeholder="Description">
 		  </div>
 		  <button type="submit" class="btn btn-primary">Submit</button>
 		</form>
